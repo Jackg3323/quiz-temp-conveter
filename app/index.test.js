@@ -25,7 +25,7 @@ describe("tempConvert for celcius", () => {
 describe("tempConvert for Fahrenheit", () => {
   test("converts temp to Fahrenheit", () => {
     expect(tempConvert(50, "toCelsius")).toBe("10");
-    expect(tempConvert(100, "toCelsius")).toBe("38");
+    expect(tempConvert(100, "toCelsius")).toBe("37.778");
   });
 
   // second test does not round
@@ -41,7 +41,7 @@ describe("tempConvert for Fahrenheit", () => {
   });
 
   test("converts temp to Fahrenheit with string temp", () => {
-    expect(tempConvert("100", "toCelsius")).toBe("10");
-    expect(tempConvert("50", "toCelsius")).toBe("38");
+    expect(tempConvert("100", "toCelsius")).toBe("37.778");
+    expect(tempConvert("50", "toCelsius")).toBe("10");
   });
 });
