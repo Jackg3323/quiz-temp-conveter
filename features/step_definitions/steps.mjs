@@ -17,3 +17,15 @@ Then("I see {int}° {units}", function (expected, _) {
 
   expectHelper();
 });
+
+Given("I have non-numerical {string}", function (temp2Convert) {
+  this.temp2Convert = temp2Convert;
+});
+
+Then("I {string} a blank string", function (expected, _) {
+  const expectHelper = () => {
+    expect(this.convertedTemp).toBe(expected.toString());
+  };
+
+  expectHelper();
+});

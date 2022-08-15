@@ -3,7 +3,7 @@
   "main": "app/index.js",
   "type": "module",
   "scripts": {
-    "test": "cucumber-js"
+    "test": "cucumber-js -f @cucumber/pretty-formatter"
   },
   "devDependencies": {
     "@babel/core": "^7.18.10",

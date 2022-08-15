@@ -18,6 +18,6 @@ Feature: Convert Temperatures
     Then I "see" a blank string
 
   Scenario: Convert to Fahrenheit with non-numerical input
-    Given I have non-numerical input
+    Given I have non-numerical "input"
     When I convert it to degrees Fahrenheit
     Then I "see" a blank string
