@@ -22,9 +22,9 @@ Given("I have non-numerical {string}", function (temp2Convert) {
   this.temp2Convert = temp2Convert;
 });
 
-Then("I {string} a blank string", function (expected, _) {
+Then("I {word} a blank string", function (_) {
   const expectHelper = () => {
-    expect(this.convertedTemp).toBe(expected.toString());
+    expect(this.convertedTemp).toBe("");
   };
 
   expectHelper();
