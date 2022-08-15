@@ -2,7 +2,7 @@ import { Given, Then, When } from "@cucumber/cucumber";
 import { expect } from "expect";
 import tryConvert from "../../app/index.js";
 
-Given("I have a temperature of {int}° {units}", function (temp2Convert, _) {
+Given("I have a temperature of {int}°{units}", function (temp2Convert, _) {
   this.temp2Convert = temp2Convert;
 });
 
@@ -21,6 +21,12 @@ Then("I see {int}° {units}", function (expected, _) {
 Given("I have non-numerical {string}", function (temp2Convert) {
   this.temp2Convert = temp2Convert;
 });
+
+// remove "" from input in gherkin
+// Given("I have non-numerical input", function () {
+//   const temp2Convert = "";
+//   this.temp2Convert = temp2Convert;
+// });
 
 Then("I {word} a blank string", function (_) {
   const expectHelper = () => {
